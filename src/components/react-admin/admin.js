@@ -9,7 +9,7 @@ import UserIcon from '@mui/icons-material/Group';
 
 import { AdminLayout } from 'components/react-admin/adminLayout';
 
-const dataProvider = jsonServerProvider('http://proyecto5.test/api/records');
+const dataProvider = jsonServerProvider('http://encuentro.test/api/records');
 
 const RAdmin = () => (
   <Admin
