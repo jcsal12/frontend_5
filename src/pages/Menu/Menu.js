@@ -1,5 +1,6 @@
-import {Link } from 'wouter';
 import './Menu.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './../../images/LOGO_ESCOOL2.svg';
 import logoName from './../../images/fuente.svg';
 const Menu = () => (
