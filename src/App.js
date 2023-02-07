@@ -4,7 +4,7 @@ import Dashboard from 'pages/dashboard';
 import RAdmin from 'components/react-admin/admin';
 import Login from 'pages/login';
 import Register from 'pages/register';
-import Home from 'pages/home';
+import Home from 'pages/home.js';
 import ForgotPassword from 'pages/forgot-password';
 import PasswordReset from 'pages/password-reset';
 import NotFoundPage from 'pages/404';
@@ -20,8 +20,7 @@ function App() {
         <Route path="/password-reset/:token" element={<PasswordReset />} />
         <Route path="/pre_dashboard" element={<Dashboard />} />
         <Route path="/dashboard/*" element={<RAdmin />} />
-        <Route path="*" element={<NotFoundPage/>}
-        />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </div>
   );

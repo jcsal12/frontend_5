@@ -18,7 +18,7 @@ import CustomerIcon from '@mui/icons-material/SupportAgent';
 import { AdminLayout } from 'components/react-admin/adminLayout';
 
 //const dataProvider = jsonServerProvider('http://encuentro.test/api/records');PARA CRUD API
-const dataProvider = jsonapiClient('http://encuentro.test/api');//PARA CONTROLLERS
+//  const dataProvider = jsonapiClient('http://encuentro.test/api');//PARA CONTROLLERS
 
 const RAdmin = () => {
   function handleDataProvider(dataProvider) {
