@@ -15,6 +15,9 @@ import UserIcon from '@mui/icons-material/Group';
 import MigrationIcon from '@mui/icons-material/Storage';
 import CustomerIcon from '@mui/icons-material/SupportAgent';
 
+import { BookList} from 'components/react-admin/books';
+import BookIcon from '@mui/icons-material/Palette';
+
 import { AdminLayout } from 'components/react-admin/adminLayout';
 
 //const dataProvider = jsonServerProvider('http://encuentro.test/api/records');PARA CRUD API
@@ -32,6 +35,7 @@ const RAdmin = () => {
   if (!dataProvider) {
     handleDataProvider(jsonapiClient(API_URL))
   }
+  
   return (
   <Admin
     basename="/dashboard"
@@ -44,6 +48,7 @@ const RAdmin = () => {
       list={MigrationList} icon={MigrationIcon} edit={MigrationEdit} create={MigrationCreate}/>
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
     <Resource name="users" list={UserList} icon={UserIcon} recordRepresentation="name" />
+    <Resource name="books" list={BookList} icon={BookIcon} />
   </Admin>
 )}
 
