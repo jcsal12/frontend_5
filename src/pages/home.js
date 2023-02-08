@@ -10,10 +10,10 @@ export default function Home() {
 
   function getProducts() {
     jsonProvider()
-    .then(response => {
-      setData(response);
-    });
-  };
+      .then(response => {
+        setData(response)
+      })
+  }
 
   function muestratarjetas(item) {
     return (
@@ -25,7 +25,6 @@ export default function Home() {
   }
 
   useEffect(getProducts, []);
-  console.log(data);
   return (
     <div>
       <h1>Home Page</h1>
