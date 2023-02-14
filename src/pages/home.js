@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MyCard from 'components/escool/MyCard';
-import { jsonProvider } from 'services/jsonProvider';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { useLibros } from 'hooks/useLibros';
 
 export default function Home() {
-  const [data, setData] = useState([]);
-
-  function getProducts() {
-    jsonProvider().then((response) => {
-      setData(response);
-    });
-  }
+  const { data, loading } = useLibros();
 
   function muestratarjetas(item) {
-    return <MyCard key={item.id} item={item} />;
+    return <MyCard key={item.id} item={item.attributes} />;
   }
-
-  useEffect(getProducts, []);
+  console.log(data);
   return (
     <div>
       <h1>Home Page</h1>
       <Container>
-        <Row xs={1} sm={2} md={3} lg={4} xl={5} className="g-4" >
+        <Row xs={1} sm={2} md={3} lg={4} className="g-4" >
           {data.map(muestratarjetas)}
         </Row>
       </Container>
