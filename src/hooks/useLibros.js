@@ -10,7 +10,7 @@ export const useLibros = () => {
       setData(response.data)
       setLoading(false)
     });
-  });
+  },[]);
 
   return {
     data,
