@@ -3,6 +3,9 @@ import MyCard from 'components/escool/MyCard';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { useLibros } from 'hooks/useLibros';
+import Carrusel from 'components/escool/Carrusel';
+import Cartel from 'components/escool/Cartel';
+import BarraNavegacion from 'components/escool/BarraNavegacion';
 
 export default function Home() {
   const { data, loading } = useLibros();
@@ -10,13 +13,14 @@ export default function Home() {
   function muestratarjetas(item) {
     return <MyCard key={item.id} item={item.attributes} />;
   }
-  console.log(data);
   return (
     <div>
-      <h1>Home Page</h1>
-      <Container>
+      <Container fluid >
+        <BarraNavegacion />
+        <Carrusel />
+        <Cartel />
         <Row xs={1} sm={2} md={3} lg={4} className="g-4" >
-          {data.map(muestratarjetas)}
+          {loading ? <p>Cargando...</p> : data.map(muestratarjetas)}
         </Row>
       </Container>
     </div>
