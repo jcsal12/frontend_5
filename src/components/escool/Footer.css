@@ -1,0 +1,6 @@
+.general{
+    background-color: #E6AA51;
+}
+.listas{
+    flex-direction: column !important;
+}
