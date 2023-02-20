@@ -6,6 +6,7 @@ import { useLibros } from 'hooks/useLibros';
 import Carrusel from 'components/escool/Carrusel';
 import Cartel from 'components/escool/Cartel';
 import BarraNavegacion from 'components/escool/BarraNavegacion';
+import Footer from 'components/escool/Footer';
 
 export default function Home() {
   const { data, loading } = useLibros();
@@ -22,6 +23,7 @@ export default function Home() {
         <Row xs={1} sm={2} md={3} lg={4} className="g-4" >
           {loading ? <p>Cargando...</p> : data.map(muestratarjetas)}
         </Row>
+        <Footer></Footer>
       </Container>
     </div>
   );
