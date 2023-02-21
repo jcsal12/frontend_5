@@ -28,8 +28,8 @@ import BookIcon from '@mui/icons-material/Palette';
 
 import { AdminLayout } from 'components/react-admin/adminLayout';
 
-//const dataProvider = jsonServerProvider('http://encuentro.test/api/records');PARA CRUD API
-const dataProvider = jsonapiClient('http://encuentro.test/api'); //PARA CONTROLLERS
+//const dataProvider = jsonServerProvider('http://encuentro.com/api/records');PARA CRUD API
+const dataProvider = jsonapiClient('http://encuentro.com/api'); //PARA CONTROLLERS
 
 const RAdmin = () => {
   function handleDataProvider(dataProvider) {

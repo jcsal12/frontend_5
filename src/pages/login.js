@@ -81,7 +81,7 @@ const Login = (props) => {
               to="/forgot-password"
               className="underline text-sm text-gray-600 hover:text-gray-900"
             >
-              Forgot your password?
+              Forgot your pene?
             </NavLink>
             <Button className="ml-3">
               Login
