@@ -1,5 +1,5 @@
 export function jsonProvider() {
-  return fetch('http://encuentro.test/api/books')
+  return fetch('http://encuentro.com/api/books')
     .then(response => response.json())
     .then(data => {
       let books = data;
