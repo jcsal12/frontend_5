@@ -6,6 +6,7 @@ import logo_escool from './../../images/LOGO_ESCOOL22.png';
 import escool from './../../images/fuente 1.png';
 import {Link} from 'react-router-dom';
 import './BarraNavegacion.css';
+import GoogleButton from 'react-google-button'
 
 function BarraNavegacion() {
   function scrollTop() {
@@ -29,9 +30,9 @@ function BarraNavegacion() {
             <Nav.Link>Populares</Nav.Link>
           </Nav>
           <Nav>
-            <Link to="/login"><Button className='navbar-login mx-2 mt-3'>INICIA SESIÓN</Button></Link>
-
-            <Button className='navbar-register mx-2 mt-3'>REGÍSTRATE</Button>
+            <Link to="/dashboard/login"><Button className='navbar-login mx-2 mt-3'>INICIA SESIÓN</Button></Link>
+            <Link to="/register"><Button className='navbar-register mx-2 mt-3'>REGÍSTRATE</Button></Link>
+            <Link to="/login-google"><GoogleButton></GoogleButton></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
