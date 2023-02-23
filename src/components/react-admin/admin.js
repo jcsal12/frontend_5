@@ -52,32 +52,19 @@ const RAdmin = () => {
       loginPage={myLogin}
     >
       <Resource
+        name="users"
+        list={UserList}
+        icon={UserIcon}
+        recordRepresentation="name"
+      />
+      <Resource
         name="customers"
         list={CustomerList}
         icon={CustomerIcon}
         edit={CustomerEdit}
         create={CustomerCreate}
       />
-      <Resource
-        name="migrations"
-        list={MigrationList}
-        icon={MigrationIcon}
-        edit={MigrationEdit}
-        create={MigrationCreate}
-      />
-      <Resource
-        name="posts"
-        list={PostList}
-        edit={PostEdit}
-        create={PostCreate}
-        icon={PostIcon}
-      />
-      <Resource
-        name="users"
-        list={UserList}
-        icon={UserIcon}
-        recordRepresentation="name"
-      />
+      
       <Resource name="books" list={BookList} icon={BookIcon} />
     </Admin>
   );

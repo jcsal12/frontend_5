@@ -30,7 +30,7 @@ function BarraNavegacion() {
             <Nav.Link>Populares</Nav.Link>
           </Nav>
           <Nav>
-            <Link to="/dashboard/login"><Button className='navbar-login mx-2 mt-3'>INICIA SESIÓN</Button></Link>
+            <Link to="/dashboard/"><Button className='navbar-login mx-2 mt-3'>INICIA SESIÓN</Button></Link>
             <Link to="/register"><Button className='navbar-register mx-2 mt-3'>REGÍSTRATE</Button></Link>
             <Link to="/login-google"><GoogleButton></GoogleButton></Link>
           </Nav>
