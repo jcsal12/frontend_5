@@ -51,21 +51,13 @@ const RAdmin = () => {
       authProvider={AuthProvider}
       loginPage={myLogin}
     >
+      <Resource name="books" list={BookList} icon={BookIcon} />
       <Resource
         name="users"
         list={UserList}
         icon={UserIcon}
         recordRepresentation="name"
       />
-      <Resource
-        name="customers"
-        list={CustomerList}
-        icon={CustomerIcon}
-        edit={CustomerEdit}
-        create={CustomerCreate}
-      />
-      
-      <Resource name="books" list={BookList} icon={BookIcon} />
       <Resource
         name="customers"
         list={CustomerList}
