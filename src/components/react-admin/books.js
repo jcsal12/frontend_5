@@ -4,9 +4,11 @@ import {
   SimpleList,
   Datagrid,
   TextField,
-  ReferenceField,
   TextInput,
-  EditButton
+  EditButton,
+  SimpleForm,
+  Edit,
+  Create
 } from 'react-admin';
 
 import { useRecordContext} from 'react-admin';
@@ -31,8 +33,37 @@ return (
         <TextField source="title" />
         <TextField source="description" />
         <TextField source="price" />
+        <EditButton />
       </Datagrid>
     )}
   </List>
 );
 }
+
+const BookTitle = () => {
+  const record = useRecordContext();
+  return <span>Book {record ? `"${record.title}"` : ''}</span>;
+};
+
+export const BookEdit = () => (
+    <Edit title={<BookTitle />}>
+    <SimpleForm>
+        <TextInput source="id" disabled />
+        <TextInput source="title" />
+        <TextInput source="description" />
+        <TextInput source="price" />
+    </SimpleForm>
+    </Edit>
+);
+
+export const BookCreate = () => (
+    <Create>
+        <SimpleForm>
+          <TextInput source="title" />
+          <TextInput source="description" />
+          <TextInput source="price" />
+          <TextInput source="currency" />
+          <TextInput source="images" />
+        </SimpleForm>
+    </Create>
+    );
