@@ -13,7 +13,7 @@ function MyCard({ item }) {
   return (
     <Col>
       <Card className='mycard'>
-        <Card.Img className='mycard-img' variant="top" src={images[0].xsmall} />
+        <Card.Img className='mycard-img' variant="top" src={images} />
         <Card.Body>
           <Card.Text className='fs-4 fw-bold'>{price}€</Card.Text>
           <Card.Title>{title}</Card.Title>

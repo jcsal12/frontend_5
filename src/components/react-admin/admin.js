@@ -23,14 +23,14 @@ import UserIcon from '@mui/icons-material/Group';
 import MigrationIcon from '@mui/icons-material/Storage';
 import CustomerIcon from '@mui/icons-material/SupportAgent';
 
-import { BookList } from 'components/react-admin/books';
-import { LocationList } from './locations';
+import { BookCreate, BookEdit, BookList } from 'components/react-admin/books';
+import { LocationCreate, LocationEdit, LocationList } from './locations';
 import BookIcon from '@mui/icons-material/MenuBook';
 import LocationIcon from '@mui/icons-material/LocationCity';
 import CategoryIcon from '@mui/icons-material/Category';
 
 import { AdminLayout } from 'components/react-admin/adminLayout';
-import { CategoryList } from './categories';
+import { CategoryCreate, CategoryEdit, CategoryList } from './categories';
 
 //const dataProvider = jsonServerProvider('http://encuentro.com/api/records');PARA CRUD API
 const dataProvider = jsonapiClient('http://encuentro.com/api'); //PARA CONTROLLERS
@@ -66,9 +66,9 @@ const RAdmin = () => {
       authProvider={AuthProvider}
       loginPage={myLogin}
     >
-      <Resource name="books" list={BookList} icon={BookIcon} />
-      <Resource name="locations" list={LocationList} icon={LocationIcon} />
-      <Resource name="categories" list={CategoryList} icon={CategoryIcon} />
+      <Resource name="books" list={BookList} icon={BookIcon} edit={BookEdit} create={BookCreate}/>
+      <Resource name="locations" list={LocationList} icon={LocationIcon} edit={LocationEdit} create={LocationCreate}/>
+      <Resource name="categories" list={CategoryList} icon={CategoryIcon} edit={CategoryEdit} create={CategoryCreate}/>
       <Resource
         name="users"
         list={UserList}
