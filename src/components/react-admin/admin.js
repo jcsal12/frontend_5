@@ -66,6 +66,13 @@ const RAdmin = () => {
       />
       
       <Resource name="books" list={BookList} icon={BookIcon} />
+      <Resource
+        name="customers"
+        list={CustomerList}
+        icon={CustomerIcon}
+        edit={CustomerEdit}
+        create={CustomerCreate}
+      />
     </Admin>
   );
 };
