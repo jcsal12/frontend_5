@@ -1,9 +1,9 @@
 export function jsonProvider() {
-  return fetch('http://encuentro.com/api/books')
+  return fetch('http://encuentro.com/api/libros')
     .then(response => response.json())
     .then(data => {
-      let books = data;
-      return books;
+      let libros = data;
+      return libros;
     })
 
 }
