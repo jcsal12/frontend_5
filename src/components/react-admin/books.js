@@ -11,7 +11,7 @@ import {
   Create
 } from 'react-admin';
 
-import { useRecordContext} from 'react-admin';
+import { useRecordContext } from 'react-admin';
 import { useMediaQuery } from '@mui/material';
 
 const bookFilters = [
@@ -19,25 +19,25 @@ const bookFilters = [
 ];
 
 export const BookList = () => {
-const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-return (
-  <List filters={bookFilters} >
-    {isSmall ? (
-      <SimpleList
+  const isSmall = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  return (
+    <List filters={bookFilters} >
+      {isSmall ? (
+        <SimpleList
           primaryText="%{title}"
-      >
-      <EditButton />
-      </SimpleList>
-    ) : (
-      <Datagrid bulkActionButtons={false} >
-        <TextField source="title" />
-        <TextField source="description" />
-        <TextField source="price" />
-        <EditButton />
-      </Datagrid>
-    )}
-  </List>
-);
+        >
+          <EditButton />
+        </SimpleList>
+      ) : (
+        <Datagrid bulkActionButtons={false} >
+          <TextField source="title" />
+          <TextField source="description" />
+          <TextField source="price" />
+          <EditButton />
+        </Datagrid>
+      )}
+    </List>
+  );
 }
 
 const BookTitle = () => {
@@ -46,24 +46,24 @@ const BookTitle = () => {
 };
 
 export const BookEdit = () => (
-    <Edit title={<BookTitle />}>
+  <Edit title={<BookTitle />}>
     <SimpleForm>
-        <TextInput source="id" disabled />
-        <TextInput source="title" />
-        <TextInput source="description" />
-        <TextInput source="price" />
+      <TextInput source="id" disabled />
+      <TextInput source="title" />
+      <TextInput source="description" />
+      <TextInput source="price" />
     </SimpleForm>
-    </Edit>
+  </Edit>
 );
 
 export const BookCreate = () => (
-    <Create>
-        <SimpleForm>
-          <TextInput source="title" />
-          <TextInput source="description" />
-          <TextInput source="price" />
-          <TextInput source="currency" />
-          <TextInput source="images" />
-        </SimpleForm>
-    </Create>
-    );
+  <Create>
+    <SimpleForm>
+      <TextInput source="title" />
+      <TextInput source="description" />
+      <TextInput source="price" />
+      <TextInput source="currency" />
+      <TextInput source="images" />
+    </SimpleForm>
+  </Create>
+);

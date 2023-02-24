@@ -1,11 +1,13 @@
 // in src/components/react-admin/users.tsx
 import { useMediaQuery } from '@mui/material';
-import { List, SimpleList, Datagrid, TextField, EditButton,
+import {
+  List, SimpleList, Datagrid, TextField, EditButton,
   SimpleForm,
   Edit,
-  Create} from 'react-admin';
-import {TextInput} from 'react-admin';
-import { useRecordContext} from 'react-admin';
+  Create
+} from 'react-admin';
+import { TextInput } from 'react-admin';
+import { useRecordContext } from 'react-admin';
 
 const locationFilters = [
   <TextInput source="q" label="Search" alwaysOn />
@@ -36,18 +38,18 @@ const LocationTitle = () => {
 };
 
 export const LocationEdit = () => (
-    <Edit title={<LocationTitle />}>
+  <Edit title={<LocationTitle />}>
     <SimpleForm>
-        <TextInput source="id" disabled />
-        <TextInput source="name" />
+      <TextInput source="id" disabled />
+      <TextInput source="name" />
     </SimpleForm>
-    </Edit>
+  </Edit>
 );
 
 export const LocationCreate = () => (
-    <Create>
-        <SimpleForm>
-          <TextInput source="name" />
-        </SimpleForm>
-    </Create>
-    );
+  <Create>
+    <SimpleForm>
+      <TextInput source="name" />
+    </SimpleForm>
+  </Create>
+);
